@@ -15,16 +15,18 @@ and they lived at the bottom of a well.</p>
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_doc, 'html.parser')
 
-#print(soup.prettify())
-print(soup.title)
-print(soup.title.name)
-print(soup.title.string)
-print(soup.parent.name)
-print(soup.p)
-print(soup.p['class'])
-print(soup.a)
-print(soup.find_all('a'))
-print(soup.find(id="link3"))
+# print(soup.prettify())
+# print(soup.title)
+# print(soup.title.name)
+# print(soup.title.string)
+# print(soup.parent.name)
+# print(soup.p)
+# print(soup.p['class'])
+# print(soup.a)
+#print(soup.find_all('a'))
+# print(soup.find(id="link3"))
 
-for link in soup.find_all('a'):
-    print(link.get('href'))
+# for link in soup.find_all('a'):
+#      print(link.get('href'))
+
+print(soup.get_text())
